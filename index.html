@@ -13,49 +13,61 @@
             align-items: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172, #48dbfb, #ff9ff3, #54a0ff);
+            background-size: 360% 360%;
+            animation: gradientShift 15s ease infinite;
             color: #333;
+            min-height: 100vh;
         }
-
+        @keyframes gradientShift {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.50);
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             text-align: left;
             margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
         }
-
+        .container:hover {
+            transform: translateY(-5px);
+        }
         h1, h2 {
             color: #333;
         }
-
         p {
             line-height: 1.6;
             color: #555;
         }
-
         a {
             color: #007bff;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-
         a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
-
         .blog-post {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
-
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
         .blog-post h2 {
             margin-bottom: 10px;
         }
-
         .blog-post .date {
             font-size: 0.8em;
             color: #777;
@@ -69,23 +81,22 @@
         <p>Welcome to my website! I'll be posting stuff here. </p>
         <p>Check out the Source on <a href="https://github.com/NaxUnknown/naxs-stuff/" target="_blank">GitHub</a>.</p>
     </div>
-
     <div class="container">
         <h2>My Blog</h2>
-
         <div class="blog-post">
             <div class="date">June 28, 2024</div>
             <h2><a href="#">Website Creation</a></h2>
             <p>This is my first blog post! I'm excited to start sharing my thoughts and experiences with you all.</p>
         </div>
-
         <div class="blog-post">
             <div class="date">June 29, 2024</div>
-            <h2><a href="#">Arch linux.</a></h2>
+            <h2><a href="https://archlinux.org/">Arch linux.</a></h2>
             <p>Tried out arch linux. It was laggy and unstable however STILL good!</p>
+        <div class="blog-post">
+            <div class="date">July 7, 2024</div>
+            <h2><a href="#">HUGE UPDATE IN THE UI.</a></h2>
+            <p>If you haven't tell by now this new UI is FANTASTIC!</p>
         </div>
-
-
         </div>
     </div>
 </body>
