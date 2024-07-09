@@ -73,6 +73,47 @@
             color: #777;
             margin-bottom: 10px;
         }
+        .patreon-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(145deg, #ff424d, #ff5e69);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .patreon-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        .patreon-button:active {
+            transform: translateY(1px);
+        }
+        .patreon-button::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(225deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/NaxUnknownDev" target="_blank" class="patreon-button">+</a>
     </style>
 </head>
 <body>
@@ -96,6 +137,11 @@
         <div class="blog-post">
             <div class="date">July 7, 2024</div>
             <h2><a href="#">HUGE UPDATE IN THE UI.</a></h2>
+            <p>If you haven't tell by now this new UI is FANTASTIC!</p>
+        </div>
+        <div class="blog-post">
+            <div class="date">July 9, 2024</div>
+            <h2><a href="#">.</a></h2>
             <p>If you haven't tell by now this new UI is FANTASTIC!</p>
         </div>
         </div>
